@@ -7,7 +7,7 @@ var mysql = require('mysql');
 //// function dbConnect(callback, opt){
     var options;
     if(process.env.JAWSDB_URL){
-        options = JAWSDB_URL
+        options = process.env.JAWSDB_URL
     } else{
         options = {
             host: process.env.DB_HOST,
