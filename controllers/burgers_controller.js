@@ -29,7 +29,8 @@ router.post("/build", function(req,res){
         console.log(a)
         console.log(b)
         console.log(c)
-        res.send("OK")
+        loadBurgers(res);
+        res.redirect("/");
     });
 });
 

@@ -20,6 +20,8 @@ $(document).ready(function () {
             $.post("/build", newBurger, function (res) {
                 if(res === "OK"){
                     $.get("/")
+                } else if (!res){
+                    $.get("/");
                 }
             });
         } else {
