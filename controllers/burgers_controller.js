@@ -29,8 +29,9 @@ router.post("/build", function(req,res){
         console.log(a)
         console.log(b)
         console.log(c)
-        loadBurgers(res);
-        res.redirect("/");
+        model.getBurgers(function(card){
+            res.render("index", {brgList: card});
+        })
     });
 });
 
