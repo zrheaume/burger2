@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eat Da Burger</title>
+    <link rel='stylesheet' type='text/css' href='/assets/css/bootstrap.css'>
+</head>
+
+<body>
+    <div class='container'>
+
+        <div class='row'>
+            <div class='col-12'>
+                <div class='jumbotron'>
+                    <h2> Eat Da Burger </h2>
+                    <span>The Number One BurgerBuilder in the World</span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='card col-5'>
+                <div class='card-body'>
+                    <h4 class='card-title'> Build Your Burger </h4>
+                    <div class='card-text'>
+                        Select from our fine burger options, and see for yourself what really works!
+                        <hr>
+                        <div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="select_meat">Pick Your Patty</label>
+                                    <select class="form-control" id="select_meat">
+                                        <option>Beef</option>
+                                        <option>Pork</option>
+                                        <option>Turkey</option>
+                                        <option>Salmon</option>
+                                        <option>Vegitarian</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select_bun">Bet on a Bun</label>
+                                    <select class="form-control" id="select_bun">
+                                        <option>Classic White</option>
+                                        <option>Classic Sesame</option>
+                                        <option>Country Potato</option>
+                                        <option>Brioche</option>
+                                        <option>Pretzel</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_lettuce" value="">
+                                    <label class="form-check-label" for="check_lettuce"> LETTUCE </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_tomatoes" value="">
+                                    <label class="form-check-label" for="check_tomatoes"> TOMATOES </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_onions" value="">
+                                    <label class="form-check-label" for="check_onionsRaw"> ONIONS </label>
+                                </div>
+
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_pickles" value="">
+                                    <label class="form-check-label" for="check_pickles"> PICKLES </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_bacon" value="">
+                                    <label class="form-check-label" for="check_bacon"> BACON </label>
+                                </div>
+                                <hr>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_ketchup" value="">
+                                    <label class="form-check-label" for=""> KETCHUP </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_mustard" value="">
+                                    <label class="form-check-label" for=""> MUSTARD </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_mayo" value="">
+                                    <label class="form-check-label" for=""> MAYO </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="check_bbq" value="">
+                                    <label class="form-check-label" for=""> BBQ </label>
+                                </div>
+                                <hr>
+                                <div class='form-group'>
+                                    <label for='burger_name'> Name your burger: </label>
+                                    <input id='burger_name' class="form-control" type="text" placeholder="Rabid Rodeo">
+                                </div>
+                                <br>
+                                <button id="buildBurger" type="button" class="btn btn-secondary">Build It!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='card col-7'>
+                <div class='card-body'>
+                    <h4 class='card-title'> Eat Da Burger </h4>
+                    <div class='card-text'>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script type='text/javascript' src='/assets/js/bootstrap.js'></script>
+    <script type='text/javascript' src='/assets/js/buildBurger.js'></script>
+</body>
+
+</html>
