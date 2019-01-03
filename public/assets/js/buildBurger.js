@@ -17,13 +17,7 @@ $(document).ready(function () {
 
         if (newBurger.name) {
             console.log(newBurger);
-            $.post("/build", newBurger, function (res) {
-                if(res === "OK"){
-                    $.get("/")
-                } else if (!res){
-                    $.get("/");
-                }
-            });
+            $.post("/build", newBurger);
         } else {
             console.log("Please name your burger")
         }

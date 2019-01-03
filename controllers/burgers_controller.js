@@ -30,7 +30,7 @@ router.post("/build", function(req,res){
         console.log(b)
         console.log(c)
         model.getBurgers(function(card){
-            res.render("index", {brgList: card});
+            res.redirect("/");
         })
     });
 });
