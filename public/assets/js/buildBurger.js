@@ -17,7 +17,10 @@ $(document).ready(function () {
 
         if (newBurger.name) {
             console.log(newBurger);
-            $.post("/build", newBurger);
+            $.post("/api/build", newBurger).then(function(){
+                window.location.reload(true)
+            });
+
         } else {
             console.log("Please name your burger")
         }

@@ -12,23 +12,17 @@ function loadBurgers(pipe){
         console.log(card)
         pipe.render("index", {brgList: card});
     });
-}
+};
 
 router.get("/", function(req, res){
     console.log("Request")
     loadBurgers(res);
 });
 
-
-
-router.post("/build", function(req,res){
-    //TODO Call model function to validate & insert new burger
+router.post("/api/build", function(req,res){
     let burgDat = req.body
     let burgInst = new model.BurgerInsertPacket(burgDat)
-    model.addBurger(burgInst, function(a, b, c){
-        console.log(a)
-        console.log(b)
-        console.log(c)
+    model.addBurger(burgInst, function(){
         model.getBurgers(function(card){
             res.redirect("/");
         })

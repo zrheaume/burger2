@@ -1,4 +1,52 @@
 <div class='container'>
+    {{#each brgList}}
+    <div class="modal fade" id="burg{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{this.burger_name}} Condiments</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {{#if this.lettuce}}
+                    <span>Lettuce,</span>
+                    {{/if}}
+                    {{#if this.toms}}
+                    <span>Tomatoes,</span>
+                    {{/if}}
+                    {{#if this.onions}}
+                    <span>Onions,</span>
+                    {{/if}}
+                    {{#if this.pickles}}
+                    <span>Pickles,</span>
+                    {{/if}}
+                    {{#if this.bacon}}
+                    <span>Bacon,</span>
+                    {{/if}}
+                    {{#if this.ketchup}}
+                    <span>Ketchup,</span>
+                    {{/if}}
+                    {{#if this.mustard}}
+                    <span>Mustard,</span>
+                    {{/if}}
+                    {{#if this.mayo}}
+                    <span>Mayo,</span>
+                    {{/if}}
+                    {{#if this.bbq}}
+                    <span>BBQ</span>
+                    {{/if}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
 
     <div class='row'>
         <div class='col-12'>
@@ -92,7 +140,7 @@
                 </div>
             </div>
         </div>
-        <div class='card col-7'>
+        <div class='card col-7' id='burgs_section'>
             <div class='card-body'>
                 <h3 class='card-title'> Eat Da Burger </h3>
                 <div class='card-text'>
@@ -100,9 +148,13 @@
                     <div class='card'>
                         <div class='card-body'>
                             <h4 class='card-title'> {{this.burger_name}}</h4>
-                            <div class='card-text'> 
-                                <p> Meat: {{this.meat}}</p>
-                                <p> Bun: {{this.bun}}</p>
+                            <div class='card-text'>
+                                <p> A {{this.meat}} patty on a {{this.bun}} bun</p>
+                            </div>
+                            <div class='card-footer'>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#burg{{this.id}}">
+                                    View Details
+                                </button>
                             </div>
                         </div>
                     </div>
